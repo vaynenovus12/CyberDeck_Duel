@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="#"><img src="./app/src/main/res/drawable/cyberdeck_duel.png" alt="CyberDeck Duel" width="200"></a>
+  <a href="#"><img src="./app/src/main/res/drawable/cyberdeck_logo.png" alt="CyberDeck Duel" width="200"></a>
   <br>
   CyberDeck Duel
   <br>
