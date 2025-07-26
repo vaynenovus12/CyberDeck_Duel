@@ -89,3 +89,24 @@ $ cd CyberDeck_Duel
 
 # Open the project in Android Studio
 # Build and run the application on an Android emulator or a physical device.
+```
+
+> **Note**
+> This is a native Android application. You will need Android Studio installed to build and run the project. Ensure your Android SDK is up-to-date. Firebase configuration (e.g., google-services.json) will be required to utilize authentication and database features.
+
+## Credits
+
+This game utilizes the following technologies and knowledge bases:
+
+- [Java](https://www.java.com/en/)
+- [Firebase](https://firebase.google.com/)
+- [MITRE ATT&CK® Matrix](https://attack.mitre.org/)
+
+## License
+
+BSD 2-Clause license
+
+---
+
+> GitHub [@vaynenovus12](https://github.com/vaynenovus12) &nbsp;&middot;&nbsp;
+> Twitter [@vaynenovus12](https://twitter.com/vaynenovus12)
