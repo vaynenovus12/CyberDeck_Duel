@@ -36,8 +36,7 @@
   <a href="#license">License</a>
 </p>
 
-![CyberDeck Duel Gameplay](https://github.com/user-attachments/assets/PLACEHOLDER_IMAGE_ID_2)
-<p align="center"><i>(Placeholder for a screenshot or GIF of gameplay)</i></p>
+<video src="LINK" controls="controls" style="max-width: 730px;"></video>
 
 ---
 
