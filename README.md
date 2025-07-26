@@ -36,7 +36,7 @@
   <a href="#license">License</a>
 </p>
 
-<video src="https://www.youtube.com/watch?v=KsbtAsnJN20&ab_channel=JamesPeralta" controls="controls" style="max-width: 730px;"></video>
+https://github.com/user-attachments/assets/035e6c90-6423-4d3b-ac46-f7402a313e08
 
 ---
 
