@@ -1,0 +1,85 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="#0e1f2e">
+
+    <!-- Card Image or Icon -->
+    <ImageView
+        android:id="@+id/cardImage"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/card_img_data"/>
+
+    <!-- Card Name -->
+    <TextView
+        android:id="@+id/cardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/cardImage"
+        android:text="Access Token Manipulation"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="20sp" />
+
+    <!-- Card Type -->
+    <TextView
+        android:id="@+id/cardType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardName"
+        android:layout_toEndOf="@id/cardImage"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="Type: Attack"
+        android:textColor="#aaaaaa"
+        android:textSize="14sp" />
+
+    <!-- Category -->
+    <TextView
+        android:id="@+id/cardCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardType"
+        android:layout_toEndOf="@id/cardImage"
+        android:text="Category: Privilege Escalation"
+        android:fontFamily="@font/bahnschrift_light"
+        android:textColor="#aaaaaa"
+        android:textSize="14sp" />
+
+    <!-- Card Stats -->
+    <TextView
+        android:id="@+id/cardPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardCategory"
+        android:layout_toEndOf="@id/cardImage"
+        android:text="Power: 8"
+        android:textColor="#FFD700"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="16sp" />
+
+    <!-- Scrollable Card Description -->
+    <ScrollView
+        android:id="@+id/cardDescriptionScroll"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/cardImage"
+        android:layout_marginTop="16dp">
+
+    <!-- Card Description -->
+        <TextView
+            android:id="@+id/cardDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adversaries may modify access tokens to operate under a different user or system security context..."
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/bahnschrift_light"
+            android:textSize="14sp" />
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="playerWins" type="id" />
+    <item name="playerXP" type="id" />
+    <item name="scrollViewDeck" type="id" />
+    <item name="playerDob" type="id" />
+    <item name="playerGender" type="id" />
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0B181F"
+    tools:context=".SettingsActivity">
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/backButton"
+        android:layout_width="83dp"
+        android:layout_height="45dp"
+        android:layout_gravity="left"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/back_button_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/back_button" />
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/signOutButton"
+        android:layout_width="83dp"
+        android:layout_height="45dp"
+        android:layout_gravity="left"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/back_button_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/exit_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

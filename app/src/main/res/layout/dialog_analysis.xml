@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#0B181F">
+    <TextView
+        android:id="@+id/post_match_analysis_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/post_match_analysis"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:labelFor="@id/analysis_scroll_view"
+        android:fontFamily="@font/bahnschrift_light"
+        />
+    <ScrollView
+        android:id="@+id/analysis_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:id="@+id/analysis_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/btn_close_analysis"
+        android:layout_width="83dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/exit_button" />
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0B181F"
+    android:fillViewport="true"
+    android:padding="16dp"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/progressionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/bahnschrift_light"
+            android:paddingBottom="16dp"
+            android:text="Card Progression"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cardRecyclerView"
+            android:layout_width="872dp"
+            android:layout_height="282dp"
+            android:layout_below="@id/progressionTitle"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp" />
+
+        <com.example.cyberdeckduel.CustomImageView
+            android:id="@+id/backButton"
+            android:layout_width="83dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right"
+            android:contentDescription="@string/back_button_desc"
+            app:srcCompat="@drawable/exit_button" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

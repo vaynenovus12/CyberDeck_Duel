@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1016816661537",
+    "firebase_url": "https://cyberdeck-duel-5df8e-default-rtdb.firebaseio.com",
+    "project_id": "cyberdeck-duel-5df8e",
+    "storage_bucket": "cyberdeck-duel-5df8e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016816661537:android:526b673b21dde88d249f60",
+        "android_client_info": {
+          "package_name": "com.example.cyberdeckduel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016816661537-shqdcji4ao2gnjshmkalotjn848sija8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9LrFtzNR1xNV5WWZFnsSrGRiuqSI1bmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016816661537-shqdcji4ao2gnjshmkalotjn848sija8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,138 @@
+{
+  "T1548": {
+    "id": "T1548",
+    "name": "Abuse Elevation Control Mechanism",
+    "description": "Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level permissions. Most modern systems contain native elevation control mechanisms that are intended to limit privileges that a user can perform on a machine. Authorization has to be granted to specific users in order to perform tasks that can be considered of higher risk. An adversary can perform several methods to take advantage of built-in control mechanisms in order to escalate privileges on a system.",
+    "type": "Attack",
+    "category": "Privelege Escalation",
+    "power": 9
+  },
+  "T1134": {
+    "id": "T1134",
+    "name": "Access Token Manipulation",
+    "description": "Adversaries may modify access tokens to operate under a different user or system security context to perform actions and bypass access controls. Windows uses access tokens to determine the ownership of a running process. A user can manipulate access tokens to make a running process appear as though it is the child of a different process or belongs to someone other than the user that started the process. When this occurs, the process also takes on the security context associated with the new token. An adversary can use built-in Windows API functions to copy access tokens from existing processes; this is known as token stealing. These token can then be applied to an existing process (i.e. Token Impersonation/Theft) or used to spawn a new process (i.e. Create Process with Token). An adversary must already be in a privileged user context (i.e. administrator) to steal a token. However, adversaries commonly use token stealing to elevate their security context from the administrator level to the SYSTEM level. An adversary can then use a token to authenticate to a remote system as the account for that token if the account has appropriate permissions on the remote system. Any standard user can use the runas command, and the Windows API functions, to create impersonation tokens; it does not require access to an administrator account. There are also other mechanisms, such as Active Directory fields, that can be used to modify access tokens.",
+    "type": "Attack",
+    "category": "Privelege Escalation",
+    "power": 8
+  },
+  "T1098": {
+    "id": "T1098",
+    "name": "Account Manipulation",
+    "description": "Adversaries may manipulate accounts to maintain and/or elevate access to victim systems. Account manipulation may consist of any action that preserves or modifies adversary access to a compromised account, such as modifying credentials or permission groups. These actions could also include account activity designed to subvert security policies, such as performing iterative password updates to bypass password duration policies and preserve the life of compromised credentials. In order to create or manipulate accounts, the adversary must already have sufficient permissions on systems or the domain. However, account manipulation may also lead to privilege escalation where modifications grant access to additional roles, permissions, or higher-privileged",
+    "type": "Attack",
+    "category": "Privelege Escalation",
+    "power": 9
+  },
+  "T1547": {
+    "id": "T1547",
+    "name": "Boot or Logon Autostart Execution",
+    "description": "Adversaries may configure system settings to automatically execute a program during system boot or logon to maintain persistence or gain higher-level privileges on compromised systems. Operating systems may have mechanisms for automatically running a program on system boot or account logon. These mechanisms may include automatically executing programs that are placed in specially designated directories or are referenced by repositories that store configuration information, such as the Windows Registry. An adversary may achieve the same goal by modifying or extending features of the kernel. Since some boot or logon autostart programs run with higher privileges, an adversary may leverage these to elevate privileges.",
+    "type": "Attack",
+    "category": "Privelege Escalation",
+    "power": 7
+  },
+  "T1037": {
+    "id": "T1037",
+    "name": "Boot or Logon Initialization Scripts",
+    "description": "Adversaries may use scripts automatically executed at boot or logon initialization to establish persistence. Initialization scripts can be used to perform administrative functions, which may often execute other programs or send information to an internal logging server. These scripts can vary based on operating system and whether applied locally or remotely. Adversaries may use these scripts to maintain persistence on a single system. Depending on the access configuration of the logon scripts, either local credentials or an administrator account may be necessary. An adversary may also be able to escalate their privileges since some boot or logon initialization scripts run with higher privileges.",
+    "type": "Attack",
+    "category": "Privelege Escalation",
+    "power": 6
+  },
+  "T1543": {
+    "id": "T1543",
+    "name": "Create or Modify System Process",
+    "description": "Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence. When operating systems boot up, they can start processes that perform background system functions. On Windows and Linux, these system processes are referred to as services. On macOS, launchd processes known as Launch Daemon and Launch Agent are run to finish system initialization and load user specific parameters. Adversaries may install new services, daemons, or agents that can be configured to execute at startup or a repeatable interval in order to establish persistence. Similarly, adversaries may modify existing services, daemons, or agents to achieve the same effect. Services, daemons, or agents may be created with administrator privileges but executed under root/SYSTEM privileges. Adversaries may leverage this functionality to create or modify system processes in order to escalate privileges.",
+    "type": "Attack",
+    "category": "Privelege Escalation",
+    "power": 9
+  },
+  "T1484": {
+    "id": "T1484",
+    "name": "Domain or Tenant Policy Modification",
+    "description": "Adversaries may modify the configuration settings of a domain or identity tenant to evade defenses and/or escalate privileges in centrally managed environments. Such services provide a centralized means of managing identity resources such as devices and accounts, and often include configuration settings that may apply between domains or tenants such as trust relationships, identity syncing, or identity federation. Modifications to domain or tenant settings may include altering domain Group Policy Objects (GPOs) in Microsoft Active Directory (AD) or changing trust settings for domains, including federation trusts relationships between domains or tenants. With sufficient permissions, adversaries can modify domain or tenant policy settings. Since configuration settings for these services apply to a large number of identity resources, there are a great number of potential attacks malicious outcomes that can stem from this abuse. Adversaries may temporarily modify domain or tenant policy, carry out a malicious action(s), and then revert the change to remove suspicious indicators.",
+    "type": "Attack",
+    "category": "Privelege Escalation",
+    "power": 8
+  },
+  "T1611": {
+    "id": "T1611",
+    "name": "Escape to Host",
+    "description": "Adversaries may break out of a container to gain access to the underlying host. This can allow an adversary access to other containerized resources from the host level or to the host itself. In principle, containerized resources should provide a clear separation of application functionality and be isolated from the host environment.",
+    "type": "Attack",
+    "category": "Privelege Escalation",
+    "power": 4
+  },
+  "T1546": {
+    "id": "T1546",
+    "name": "Event Triggered Execution",
+    "description": "Adversaries may establish persistence and/or elevate privileges using system mechanisms that trigger execution based on specific events. Various operating systems have means to monitor and subscribe to events such as logons or other user activity such as running specific applications/binaries. Cloud environments may also support various functions and services that monitor and can be invoked in response to specific cloud events. Adversaries may abuse these mechanisms as a means of maintaining persistent access to a victim via repeatedly executing malicious code. After gaining access to a victim system, adversaries may create/modify event triggers to point to malicious content that will be executed whenever the event trigger is invoked. Since the execution can be proxied by an account with higher permissions, such as SYSTEM or service accounts, an adversary may be able to abuse these triggered execution mechanisms to escalate their privileges.",
+    "type": "Attack",
+    "category": "Privelege Escalation",
+    "power": 3
+  },
+  "T1055": {
+    "id": "T1055",
+    "name": "Process Injection",
+    "description": "Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges. Process injection is a method of executing arbitrary code in the address space of a separate live process. Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via process injection may also evade detection from security products since the execution is masked under a legitimate process. There are many different ways to inject code into a process, many of which abuse legitimate functionalities. These implementations exist for every major OS but are typically platform specific. More sophisticated samples may perform multiple process injections to segment modules and further evade detection, utilizing named pipes or other inter-process communication (IPC) mechanisms as a communication channel.",
+    "type": "Attack",
+    "category": "Privelege Escalation",
+    "power": 2
+  },
+  "M1047": {
+    "id": "M1047",
+    "name": "Audit",
+    "description": "Perform audits or scans of systems, permissions, insecure software, insecure configurations, etc. to identify potential weaknesses.",
+    "type": "Defense",
+    "category": "Mitigation",
+    "power": 4
+  },
+  "M1026": {
+    "id": "M1026",
+    "name": "Privileged Account Management",
+    "description": "Manage the creation, modification, use, and permissions associated to privileged accounts, including SYSTEM and root.",
+    "type": "Defense",
+    "category": "Mitigation",
+    "power": 2
+  },
+  "M1032": {
+    "id": "M1032",
+    "name": "Multi-factor Authentication",
+    "description": "Use two or more pieces of evidence to authenticate to a system; such as username and password in addition to a token from a physical smart card or token generator.",
+    "type": "Defense",
+    "category": "Mitigation",
+    "power": 5
+  },
+  "M1028": {
+    "id": "M1028",
+    "name": "Operating System Configuration",
+    "description": "Make configuration changes related to the operating system or a common feature of the operating system that result in system hardening against techniques.",
+    "type": "Defense",
+    "category": "Mitigation",
+    "power": 1
+  },
+  "M1048": {
+    "id": "M1048",
+    "name": "Application Isolation and Sandboxing",
+    "description": "Restrict execution of code to a virtual environment on or in transit to an endpoint system.",
+    "type": "Defense",
+    "category": "Mitigation",
+    "power": 2
+  },
+  "M1051": {
+    "id": "M1051",
+    "name": "Update Software",
+    "description": "Perform regular software updates to mitigate exploitation risk.",
+    "type": "Defense",
+    "category": "Mitigation",
+    "power": 1
+  },
+  "M1022": {
+    "id": "M1022",
+    "name": "Restrict File and Directory Permissions",
+    "description": "Restrict write access to logon scripts to specific administrators.",
+    "type": "Defense",
+    "category": "Mitigation",
+    "power": 2
+  }
+}

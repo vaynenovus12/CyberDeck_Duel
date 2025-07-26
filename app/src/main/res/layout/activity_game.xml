@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gameBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:splitMotionEvents="false"
+    android:background="@drawable/game_background">
+
+
+    <TextView
+        android:id="@+id/player1Name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/player1_name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/player1_frame_score"
+        android:layout_width="66dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/card_deck"
+        app:layout_constraintBottom_toTopOf="@+id/player1_card_deck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/player_score_frame" />
+
+    <TextView
+        android:id="@+id/player1Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/player1_score"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/player1_frame_score"
+        app:layout_constraintTop_toTopOf="@+id/player1_frame_score" />
+
+    <TextView
+        android:id="@+id/player2Name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/bahnschrift_light"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/player2_name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/player_1_attack_logo"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/card_deck"
+        app:layout_constraintEnd_toStartOf="@+id/player2_frame_score"
+        app:layout_constraintTop_toBottomOf="@+id/player_1_defense_logo"
+        app:srcCompat="@drawable/attack_logo" />
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/player_1_defense_logo"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/card_deck"
+        app:layout_constraintEnd_toStartOf="@+id/player2_frame_score"
+        app:layout_constraintTop_toBottomOf="@+id/player2_card_deck"
+        app:srcCompat="@drawable/defense_logo" />
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/player2_frame_score"
+        android:layout_width="66dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="28dp"
+        android:contentDescription="@string/card_deck"
+        android:rotationX="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2_card_deck"
+        app:srcCompat="@drawable/player_score_frame" />
+
+    <TextView
+        android:id="@+id/player2Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/player2_score"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/player2_frame_score"
+        app:layout_constraintEnd_toEndOf="@+id/player2_frame_score" />
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/player_2_attack_logo"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/card_deck"
+        app:layout_constraintBottom_toTopOf="@+id/player_2_defense_logo"
+        app:layout_constraintEnd_toStartOf="@+id/player1_frame_score"
+        app:srcCompat="@drawable/attack_logo" />
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/player_2_defense_logo"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/card_deck"
+        app:layout_constraintBottom_toTopOf="@+id/player1_card_deck"
+        app:layout_constraintEnd_toStartOf="@+id/player1_frame_score"
+        app:srcCompat="@drawable/defense_logo" />
+
+    <TextView
+        android:id="@+id/matchID"
+        android:layout_width="277dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/match_id"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/player2_card_deck"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/player2Name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/player1_card_deck"
+        android:layout_width="66dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="-60dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="@string/card_deck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:srcCompat="@drawable/card_deck_v2" />
+
+    <TextView
+        android:id="@+id/player1CardsLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/player1_cardsLeft"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/player1_card_deck"
+        app:layout_constraintTop_toTopOf="@+id/player1_card_deck" />
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/player2_card_deck"
+        android:layout_width="66dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="-60dp"
+        android:contentDescription="@string/card_deck"
+        android:rotationX="180"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/card_deck_v2" />
+
+    <TextView
+        android:id="@+id/player2CardsLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/player2_cardsLeft"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/player2_card_deck"
+        app:layout_constraintEnd_toEndOf="@+id/player2_card_deck" />
+
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Timer Progress Bar -->
+        <ProgressBar
+            android:id="@+id/timer_bar"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:indeterminateOnly="false"
+            android:max="120000"
+            android:progress="120000"
+            android:progressDrawable="@drawable/circular_timer_bar" />
+
+        <!-- Timer Text -->
+        <TextView
+            android:id="@+id/timer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/timer_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="35dp"
+            android:text="120s"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/opponent_card_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/player2_card_deck"
+        app:layout_constraintStart_toEndOf="@+id/player2Name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/player_card_container"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:splitMotionEvents="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/player1_card_deck"
+        app:layout_constraintStart_toEndOf="@+id/player1Name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/attack_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/player_2_attack_logo"
+        app:layout_constraintEnd_toStartOf="@+id/player_2_attack_logo"
+        app:layout_constraintStart_toEndOf="@+id/player1Name" />
+
+    <LinearLayout
+        android:id="@+id/defense_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/player_2_defense_logo"
+        app:layout_constraintStart_toEndOf="@+id/player1Name"
+        app:layout_constraintTop_toBottomOf="@+id/player_2_attack_logo" />
+
+    <LinearLayout
+        android:id="@+id/opponent_attack_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/player_1_attack_logo"
+        app:layout_constraintStart_toEndOf="@+id/player2Name"
+        app:layout_constraintTop_toTopOf="@+id/player_1_attack_logo" />
+
+    <LinearLayout
+        android:id="@+id/opponent_defense_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/player_1_attack_logo"
+        app:layout_constraintEnd_toStartOf="@+id/player_1_defense_logo"
+        app:layout_constraintStart_toEndOf="@+id/player2Name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

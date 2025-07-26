@@ -1,0 +1,53 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/iv_attack_card"
+        android:layout_width="64dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/attack_card" />
+
+    <ImageView
+        android:id="@+id/iv_defense_card"
+        android:layout_width="64dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/defense_card" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_attack_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attack_card"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_defense_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/defense_card"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:paddingTop="4dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B181F"
+    android:fitsSystemWindows="true">
+
+    <!-- Result Icon -->
+    <ImageView
+        android:id="@+id/img_result_icon"
+        android:layout_width="911dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/win_condition" />
+
+    <!-- Player 1 Name -->
+    <ImageView
+        android:id="@+id/img_player1_diamond"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/player1_score"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_result_icon"
+        app:srcCompat="@drawable/player1_score" />
+
+    <ImageView
+        android:id="@+id/img_player2_diamond"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="320dp"
+        android:contentDescription="@string/player2_score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_result_icon"
+        app:srcCompat="@drawable/player2_score" />
+
+    <ImageView
+        android:id="@+id/player1_card"
+        android:layout_width="151dp"
+        android:layout_height="186dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/player1card"
+        app:layout_constraintEnd_toStartOf="@+id/img_player1_diamond"
+        app:layout_constraintTop_toBottomOf="@+id/img_result_icon"
+        app:srcCompat="@drawable/back_of_card" />
+
+    <ImageView
+        android:id="@+id/player2_card"
+        android:layout_width="151dp"
+        android:layout_height="186dp"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/player1card"
+        app:layout_constraintStart_toEndOf="@+id/img_player2_diamond"
+        app:layout_constraintTop_toBottomOf="@+id/img_result_icon"
+        app:srcCompat="@drawable/back_of_card" />
+
+
+    <TextView
+        android:id="@+id/tv_player1_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/player_1_name"
+        android:textColor="#E8C77A"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/img_result_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_match_result" />
+
+    <!-- Player 1 Score -->
+    <TextView
+        android:id="@+id/tv_player1_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/player1_score"
+        android:textColor="#E8C77A"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_player1_diamond"
+        app:layout_constraintTop_toTopOf="@+id/img_player1_diamond" />
+
+    <!-- Player 2 Name -->
+    <TextView
+        android:id="@+id/tv_player2_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="110dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/player_2_name"
+        android:textColor="#70CFD6"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_match_result" />
+
+    <!-- Player 2 Score -->
+    <TextView
+        android:id="@+id/tv_player2_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/player2_score"
+        android:textColor="#70CFD6"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_player2_diamond"
+        app:layout_constraintTop_toTopOf="@+id/img_player2_diamond" />
+
+    <!-- Match Result -->
+    <TextView
+        android:id="@+id/tv_match_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/match_result"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_result_icon" />
+
+    <!-- Coins Earned -->
+    <TextView
+        android:id="@+id/tv_coins_earned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:gravity="center"
+        android:text="@string/coins_earned"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/img_player1_diamond"
+        app:layout_constraintTop_toBottomOf="@+id/player1_card" />
+
+    <!-- Opponent Coins -->
+
+    <!-- Player 1 Diamond -->
+
+    <!-- Player 2 Diamond -->
+
+    <!-- Exit Button -->
+    <TextView
+        android:id="@+id/tv_opponent_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:gravity="center"
+        android:text="@string/opponent_earned"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/img_player2_diamond"
+        app:layout_constraintTop_toBottomOf="@+id/player2_card" />
+
+
+    <TextView
+        android:id="@+id/tv_successful_defense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/success"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_successful_defense"
+        app:layout_constraintTop_toBottomOf="@+id/img_successful_defense" />
+
+    <TextView
+        android:id="@+id/tv_failed_defense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="@string/fail"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_failed_defense"
+        app:layout_constraintTop_toBottomOf="@+id/img_failed_defense" />
+
+    <ImageView
+        android:id="@+id/img_successful_defense"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/successful_defense_icon"
+        android:src="@drawable/success_def"
+        app:layout_constraintStart_toEndOf="@+id/player1_card"
+        app:layout_constraintTop_toBottomOf="@+id/img_player1_diamond" />
+
+
+    <ImageView
+        android:id="@+id/img_failed_defense"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/failed_defense"
+        android:src="@drawable/failed_def"
+        app:layout_constraintStart_toEndOf="@+id/img_successful_defense"
+        app:layout_constraintTop_toBottomOf="@+id/img_player1_diamond" />
+
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/btn_show_analysis"
+        android:layout_width="83dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="false"
+        android:text="@string/show_analysis_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_exit_match"
+        app:srcCompat="@drawable/show_analysis_button" />
+
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/btn_exit_match"
+        android:layout_width="83dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/exit_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/exit_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

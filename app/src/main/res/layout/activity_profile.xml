@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B181F"
+    tools:context=".ProfileActivity">
+
+    <!-- Left Section: Profile Picture and Basic Info -->
+    <ImageView
+        android:id="@+id/profile_layout_bg_1"
+        android:layout_width="224dp"
+        android:layout_height="336dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/layout_profile_bg1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_layout_bg_1" />
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/playerProfilePic"
+        android:layout_width="58dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="80dp"
+        android:contentDescription="@string/player_icon"
+        app:layout_constraintEnd_toEndOf="@+id/profile_layout_bg_1"
+        app:layout_constraintStart_toStartOf="@+id/profile_layout_bg_1"
+        app:layout_constraintTop_toTopOf="@+id/profile_layout_bg_1"
+        app:srcCompat="@drawable/player_profile_icon_unclicked" />
+
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:text="Player Name"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/playerProfilePic"
+        app:layout_constraintStart_toStartOf="@id/profile_layout_bg_1"
+        app:layout_constraintEnd_toEndOf="@id/profile_layout_bg_1" />
+
+    <TextView
+        android:id="@+id/playerDob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="DOB: 15-01-1999"
+        android:fontFamily="@font/bahnschrift_light"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/playerName"
+        app:layout_constraintStart_toStartOf="@id/profile_layout_bg_1"
+        app:layout_constraintEnd_toEndOf="@id/profile_layout_bg_1" />
+
+    <TextView
+        android:id="@+id/playerGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Gender: Male"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/bahnschrift_light"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/playerDob"
+        app:layout_constraintStart_toStartOf="@id/profile_layout_bg_1"
+        app:layout_constraintEnd_toEndOf="@id/profile_layout_bg_1" />
+
+    <!-- Middle Section: Coins, Level, XP, and Scrollable Deck -->
+    <ImageView
+        android:id="@+id/profile_layout_bg_2"
+        android:layout_width="349dp"
+        android:layout_height="336dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bahnschrift_light"
+        android:contentDescription="@string/layout_profile_bg2"
+        app:layout_constraintStart_toEndOf="@+id/profile_layout_bg_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_layout_bg_2" />
+
+    <TextView
+        android:id="@+id/playerCoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Coins: 0"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/bahnschrift_light"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_layout_bg_2"
+        app:layout_constraintStart_toStartOf="@+id/profile_layout_bg_2"
+        app:layout_constraintTop_toTopOf="@+id/profile_layout_bg_2" />
+
+    <TextView
+        android:id="@+id/playerLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Level: 1"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/bahnschrift_light"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/playerCoins"
+        app:layout_constraintStart_toStartOf="@id/profile_layout_bg_2"
+        app:layout_constraintEnd_toEndOf="@id/profile_layout_bg_2" />
+
+    <TextView
+        android:id="@+id/playerXP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="XP: 0/100"
+        android:fontFamily="@font/bahnschrift_light"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/playerLevel"
+        app:layout_constraintStart_toStartOf="@id/profile_layout_bg_2"
+        app:layout_constraintEnd_toEndOf="@id/profile_layout_bg_2" />
+
+    <!-- Right Section: Wins -->
+    <ScrollView
+        android:id="@+id/scrollViewDeck"
+        android:layout_width="309dp"
+        android:layout_height="173dp"
+        android:contentDescription="@string/card_deck"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_layout_bg_2"
+        app:layout_constraintEnd_toEndOf="@+id/profile_layout_bg_2"
+        app:layout_constraintStart_toStartOf="@+id/profile_layout_bg_2"
+        app:layout_constraintTop_toBottomOf="@+id/playerXP">
+
+        <GridLayout
+            android:id="@+id/deckLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:columnCount="5" android:padding="8dp">
+
+        </GridLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/profile_layout_bg_3"
+        android:layout_width="232dp"
+        android:layout_height="333dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/layout_profile_bg3"
+        app:layout_constraintStart_toEndOf="@+id/profile_layout_bg_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_layout_bg_3" />
+
+    <TextView
+        android:id="@+id/playerWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Wins: 0"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/bahnschrift_light"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/profile_layout_bg_3"
+        app:layout_constraintStart_toStartOf="@id/profile_layout_bg_3"
+        app:layout_constraintTop_toTopOf="@+id/profile_layout_bg_3" />
+
+    <com.example.cyberdeckduel.CustomImageView
+        android:id="@+id/backButton"
+        android:layout_width="83dp"
+        android:layout_height="45dp"
+        android:layout_gravity="left"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/back_button_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/exit_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

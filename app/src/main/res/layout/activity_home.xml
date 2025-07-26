@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/black_gradient_background"
+        tools:context=".HomeActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-2dp">
+
+        <TextView
+            android:id="@+id/playerCoins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/bahnschrift_light"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="37dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/playerCoins"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/coins_icon"
+            app:srcCompat="@drawable/coins_icon" />
+
+        <TextView
+            android:id="@+id/playerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/bahnschrift_light"
+            android:text="@string/name"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/playerProfileBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Player Level -->
+        <TextView
+            android:id="@+id/playerLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/bahnschrift_light"
+            android:text="Level: 1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/playerProfileBtn"
+            app:layout_constraintTop_toBottomOf="@+id/playerName" />
+
+        <!-- XP Progress Bar -->
+        <ProgressBar
+            android:id="@+id/playerXPProgressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="150dp"
+            android:layout_height="10dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/xp_progress_bar"
+            app:layout_constraintStart_toStartOf="@+id/playerLevel"
+            app:layout_constraintTop_toBottomOf="@+id/playerLevel" />
+
+        <!-- Current XP -->
+        <TextView
+            android:id="@+id/playerXPText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/bahnschrift_light"
+            android:text="XP: 0/100"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/playerProfileBtn"
+            app:layout_constraintTop_toBottomOf="@+id/playerXPProgressBar" />
+
+        <com.example.cyberdeckduel.CustomImageView
+            android:id="@+id/playerProfileBtn"
+            android:layout_width="52dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/player_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/player_profile_icon_unclicked" />
+
+        <com.example.cyberdeckduel.CustomImageView
+            android:id="@+id/settingsBtn"
+            android:layout_width="54dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/settings_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/settings_icon_unclicked" />
+
+        <com.example.cyberdeckduel.CustomImageView
+            android:id="@+id/findMatchBtn"
+            android:layout_width="154dp"
+            android:layout_height="229dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/find_match"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playerXPText"
+            app:srcCompat="@drawable/findmatch_button" />
+
+        <com.example.cyberdeckduel.CustomImageView
+            android:id="@+id/cardProgBtn"
+            android:layout_width="154dp"
+            android:layout_height="229dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/card_progression"
+            app:layout_constraintStart_toEndOf="@+id/findMatchBtn"
+            app:layout_constraintTop_toBottomOf="@+id/playerXPText"
+            app:srcCompat="@drawable/cardprogression_button" />
+
+        <ProgressBar
+            android:id="@+id/loadingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="12dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/loadingText" />
+
+        <TextView
+            android:id="@+id/loadingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/bahnschrift_light"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="@string/finding_match"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

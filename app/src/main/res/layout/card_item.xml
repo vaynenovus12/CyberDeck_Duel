@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:layout_gravity="center_horizontal"
+    android:background="#0B181F">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0B181F"
+        android:padding="16dp">
+
+        <!-- Card Image -->
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="108dp"
+            android:layout_height="156dp"
+            android:layout_alignParentStart="true" />
+
+        <!-- Card Name -->
+        <TextView
+            android:id="@+id/cardName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cardImage"
+            android:layout_marginStart="16dp"
+            android:text="Card Name"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bahnschrift_light"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true" />
+
+        <!-- Card Description -->
+        <TextView
+            android:id="@+id/cardDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cardImage"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/cardName"
+            android:layout_marginTop="8dp"
+            android:maxWidth="600dp"
+            android:text="Card Description"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bahnschrift_light" />
+
+        <!-- Unlock Level -->
+        <TextView
+            android:id="@+id/cardUnlockLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cardImage"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/cardDescription"
+            android:layout_marginTop="8dp"
+            android:text="Unlock Level: 0"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bahnschrift_light" />
+
+        <!-- Card Power -->
+        <TextView
+            android:id="@+id/cardPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cardImage"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/cardUnlockLevel"
+            android:layout_marginTop="8dp"
+            android:text="Power: 0"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bahnschrift_light" />
+
+        <!-- Card Status -->
+        <TextView
+            android:id="@+id/cardStatus"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardPower"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/cardImage"
+            android:fontFamily="@font/bahnschrift_light"
+            android:text="Status: Locked"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
