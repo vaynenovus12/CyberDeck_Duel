@@ -81,7 +81,7 @@ To get CyberDeck Duel running on your Android device:
 
 ```bash
 # Clone this repository
-$ git clone [https://github.com/vaynenovus12/CyberDeck_Duel.git](https://github.com/vaynenovus12/CyberDeck_Duel.git)
+$ git clone https://github.com/vaynenovus12/CyberDeck_Duel.git
 
 # Go into the project directory
 $ cd CyberDeck_Duel
